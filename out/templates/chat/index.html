@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}CH取得{% endblock title %}
+
+{% block content %}
+
+<form role="form" action="/chat/post/" method="post" class="form-horizontal">
+{% csrf_token %}
+<div class="form-group">
+  <label for="application_number" class="col-sm-3 control-label" >申請番号</label>
+  <div class="col-sm-5">
+    <input type="number" name="application_number" class="form-control" placeholder="申請番号を入力してください">
+  </div>
+</div>
+<div class="form-group">
+  <label for="application_title" class="col-sm-3 control-label" >申請書タイトル</label>
+  <div class="col-sm-5">
+    <input type="text" name="application_title" class="form-control" placeholder="タイトルを入力してください">
+  </div>
+</div>
+<div class="form-group">
+  <label for="applicant" class="col-sm-3 control-label" >申請者</label>
+  <div class="col-sm-5">
+    <input type="text" name="applicant" class="form-control" placeholder="申請者を入力してください">
+  </div>
+</div>
+<div class="form-group">
+  <label for="amount" class="col-sm-3 control-label" >金額</label>
+  <div class="col-sm-5">
+    <input type="number" name="amount" class="form-control" placeholder="金額を入力してください">
+  </div>
+</div>
+<div class="form-group">
+  <label for="application_content" class="col-sm-3 control-label" >申請内容</label>
+  <div class="col-sm-8">
+    <textarea name="application_content" class="form-control" rows="3" placeholder="申請内容を入力してください"></textarea>
+  </div>
+</div>
+<div class="form-group" >
+  <div class="">
+    <button type="submit" class="btn btn-default"/><i class="glyphicon glyphicon-comment"></i> 投稿 </button>
+  </div>
+</div>
+</form>
+
+<form role="form" action="/chat/send/" method="post">
+{% csrf_token %}
+<div class="form-group">
+  <input type="text" name="hoge" class="form-control" placeholder="tokenを入力してください">
+  <button type="submit" class="btn btn-default btn-sm" />チャンネルリスト取得</button>
+</div>
+</form>
+
+
+{% endblock content %}

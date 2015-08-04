@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Channel一覧{% endblock title %}
+
+{% block content %}
+unkooooo
+
+<table class="table table-bordered table-hover table-condensed table table-striped">
+  <tr>
+    <th>No</th>
+    <th>ChannelId</th>
+    <th>ChannelName</th>
+  </tr>
+  {% for channel in hogeson.channels %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ channel.id }}</td>
+    <td>{{ channel.name }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock content %}
