@@ -8,10 +8,12 @@ if os.environ.get('SERVER_SOFTWARE','').startswith('Dev'):
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "out.settings")
 
 #APIKEYS
-consumer_api = "TLMx9b2GcPAeUBMElKY8PwJhE"
-consumer_secret = "IRUF7n9Q0idV5QOzGMrDgT75LKqLK8OkscrxAUYg1dJV1NCmWp"
-access_token = "876140352347840513-15aKHglha33QnmoAyiTZH3lFl9FUVMu"
-access_token_secret = "uyMP91Dk2yI6aCbC2ybxQ9ycXak57WNHH3QxsT9hJtGNX"
+# changed all API keys to XXXX as security team was behind me to delete them. 
 
-slack_api_token = "xoxp-204882332822-203523130257-204081355250-8200a7efb0bec7fbd5894bf09bc7ab08"
-shodan_api = "6787hjfI6ajkrg8ef094n57WNHHjhkjfs80d9a"
+consumer_api = "XXXXXX"
+consumer_secret = "XXXXXX"
+access_token = "XXXXXX"
+access_token_secret = "XXXXXX"
+
+slack_api_token = "XXXXXX
+shodan_api = "XXXXXX"
